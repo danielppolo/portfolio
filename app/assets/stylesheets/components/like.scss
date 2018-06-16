@@ -1,0 +1,56 @@
+$size: 9vh;
+
+.action {
+  height: $size;
+  width: $size;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+// CSS Heart
+
+$width: $size/2;
+.heart{
+  background-color: $light-gray;
+  width: $width;
+  height: $width;
+  margin: auto;
+  position: absolute;
+  top: $width/4; bottom: 0;
+  left: 0; right: 0;
+  transform: rotate(-45deg);
+  &:before, &:after {
+    content: '';
+    width: $width;
+    height: $width;
+    border-radius: 50%;
+    background-color: $light-gray;
+    position: absolute;
+  }
+  &:before {
+    top: -$width / 2;
+    left: 0;
+  }
+  &:after {
+    top: 0;
+    left: $width / 2;
+  }
+  &.love {
+    background: $red;
+    &:before,
+    &:after {
+      background: $red;
+    }
+  }
+  &.active {
+    animation: grow-shrink .3s ease 1;
+  }
+}
+
+@keyframes grow-shrink {
+  40% { transform: scale(1.1) rotate(-45deg); }
+  75% { transform: scale(.9) rotate(-45deg); }
+  100% { transform: scale(1) rotate(-45deg); }
+}

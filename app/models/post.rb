@@ -3,13 +3,14 @@ class Post < ApplicationRecord
   validates :content, presence: true
   enum status: [ :done, :working, :project ]
   has_many :comments, dependent: :destroy
-
+  has_many_attached :images
 
   #Instead of ID's param
   def to_param
     title
   end
 
+  #Methods
   def categories
     self.categories.split(",")
   end
