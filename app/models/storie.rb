@@ -1,0 +1,2 @@
+class Storie < Post
+end
