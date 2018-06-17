@@ -1,1 +1,10 @@
 <h1><%= @project.title %></h1>
+<h3><%= @year if @year%></h3>
+<p><%= @status if @status%></p>
+<p><%= @author if @author %> <%= "& #{@collaborators}" if @collaborators %></p>
+<% @categories.each do |c| %>
+<p><%= c %></p>
+<% end %>
+<p><%= @content %></p>
+
+<%= render 'shared/feedback' %>

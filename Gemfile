@@ -7,8 +7,12 @@ ruby '2.4.4'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
+#Devise Authentication
+gem 'devise'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+#Simple Form for creating objects
+gem 'simple_form'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'sass-rails', '~> 5.0'

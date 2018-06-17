@@ -11,10 +11,6 @@ class Post < ApplicationRecord
   end
 
   #Methods
-  def categories
-    self.categories.split(",")
-  end
-
   def reading_time
     words = self.content.split(" ").count
     time = (words.fdiv(200).round(1))*60.round
@@ -30,6 +26,10 @@ class Post < ApplicationRecord
       end
     end
     all_cats.uniq
+  end
+
+  def self.search_by_category
+    # => Array of posts
   end
 
 end
