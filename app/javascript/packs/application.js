@@ -9,10 +9,4 @@
 
 
 
-// Code for heart animation
-const heart = document.querySelector('.heart')
-heart.addEventListener('click', (event) => {
-  heart.classList.toggle('love');
-  heart.classList.toggle('active')
-  setTimeout(()=>{ heart.classList.toggle('active'); }, 300);
-});
+

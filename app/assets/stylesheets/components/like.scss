@@ -1,41 +1,34 @@
-$size: 9vh;
-
-.action {
-  height: $size;
-  width: $size;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
+.like-btn{
+  text-align: center;
+  padding-bottom: 1em;
 }
 
-// CSS Heart
-
-$width: $size/2;
 .heart{
-  background-color: $light-gray;
-  width: $width;
-  height: $width;
+  background-color: $gray;
+  width:$title;
+  height:$title;
   margin: auto;
-  position: absolute;
-  top: $width/4; bottom: 0;
+  position: relative;
+  top:$title/4; bottom: 0;
   left: 0; right: 0;
   transform: rotate(-45deg);
+  transition: 0.5s ease;
   &:before, &:after {
     content: '';
-    width: $width;
-    height: $width;
+    width:$title;
+    height:$title;
     border-radius: 50%;
-    background-color: $light-gray;
+    background-color: $gray;
     position: absolute;
+    transition: 0.5s ease;
   }
   &:before {
-    top: -$width / 2;
+    top: -$title / 2;
     left: 0;
   }
   &:after {
     top: 0;
-    left: $width / 2;
+    left:$title / 2;
   }
   &.love {
     background: $red;
@@ -46,6 +39,13 @@ $width: $size/2;
   }
   &.active {
     animation: grow-shrink .3s ease 1;
+  }
+  &:hover {
+    background: $red;
+    &:before,
+    &:after {
+      background: $red;
+    }
   }
 }
 

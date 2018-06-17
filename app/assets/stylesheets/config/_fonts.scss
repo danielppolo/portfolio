@@ -1,0 +1,59 @@
+// Google Font
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+
+// Avenir Std
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: font_url('AvenirLTStd-Light.otf') format('opentype');
+  font-weight: light;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: font_url('AvenirLTStd-Book.otf') format('opentype');
+  font-weight: book;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: font_url('AvenirLTStd-Medium.otf') format('opentype');
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: font_url('AvenirLTStd-Heavy.otf') format('opentype');
+  font-weight: heavy;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: font_url('AvenirLTStd-Roman.otf') format('opentype');
+  font-weight: roman;
+  font-style: normal;
+}
+
+// Avenir LT Pro
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: font_url('AvenirNextLTPro-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: font_url('AvenirNextLTPro-Demi.otf') format('opentype');
+  font-weight: semibold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: font_url('AvenirNextLTPro-Regular.otf') format('opentype');
+  font-weight: regular;
+  font-style: normal;
+}
+
+$base_font: 'Avenir LT Std', sans-serif;
+$title: 20pt;
+$subtitle: 16pt;
+$text: 14pt;

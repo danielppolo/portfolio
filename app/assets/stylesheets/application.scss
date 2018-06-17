@@ -12,9 +12,10 @@
  *
  * require_tree .
  * require_self
+*/
 
 // Graphical variables
-/*@import "config/fonts";*/
+@import "config/fonts";
 @import "config/colors";
 /*@import "config/bootstrap_variables";*/
 /*@import "config/variables";*/
@@ -29,3 +30,36 @@
 /*@import "layouts/index";*/
 @import "components/index";
 @import "pages/index";
+
+
+// General rules
+ ::-moz-selection { /* Code for Firefox */
+    color: $blue;
+    background: $yellow;
+}
+
+::selection {
+    color: $blue;
+    background: $yellow;
+}
+
+body{
+  font-family: $base-font !important;
+  background-color: $white;
+  color: $black;
+}
+
+h1{
+  font-size: $title;
+  font-weight: 600;
+}
+
+h2{
+  font-size: $subtitle;
+  font-weight: 600;
+}
+
+p{
+  font-size: $text;
+  font-weight: 400;
+}

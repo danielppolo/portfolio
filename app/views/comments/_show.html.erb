@@ -1,0 +1,9 @@
+  <div  id="comments">
+    <% if comments.blank? %>
+      <p>Be the first to leave a comment :) </p>
+    <% else %>
+      <% comments.each do |comment| %>
+      <%= render 'shared/comment', comment: comment %>
+      <% end %>
+    <% end %>
+</div>

@@ -1,0 +1,27 @@
+.portfolio-footer{
+  background-color: $blue;
+  height: 400px;
+  .container{
+    height: 100%;
+  }
+  .footer-mssg{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: center;
+
+    h1{
+      color: $white;
+    }
+    a{
+      color: $yellow;
+      font-size: $title;
+      font-weight: 600;
+      text-decoration: none;
+      width: auto;
+      // border-bottom: 4px solid $yellow;
+    }
+  }
+}

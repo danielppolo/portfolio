@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   protect_from_forgery
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:create]
 
   def index
     @projects = Project.all
@@ -21,16 +21,13 @@ class ProjectsController < ApplicationController
     @likes = @project.likes
     @comments = @project.comments
     @comment = Comment.new()
-  end
-
-  def new
-    @project = Project.new()
+    @post = @project
   end
 
   def create
     @project = Project.new(project_params)
     @project.save
-    redirect_to new_project_path
+    redirect_to admin_path
   end
 
   private

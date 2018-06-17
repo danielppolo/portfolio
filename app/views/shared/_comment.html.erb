@@ -1,4 +1,4 @@
-<% @comments.each do |comment| %>
-  <p><%= comment.author %></p>
+<div class="comment">
+  <h2><%= comment.author.downcase %></h2>
   <p><%= comment.content %></p>
-<% end %>
+</div>

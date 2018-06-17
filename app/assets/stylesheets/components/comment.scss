@@ -1,3 +1,57 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Comment Form
+#new_comment{
+  width: 100%;
+  label{
+    display: none;
+  }
+  input{
+    width: 100%;
+    outline: none;
+    border:none;
+  }
+
+  // input[placeholder]{
+  //   color: $blue;
+  //   font-size: $subtitle;
+  //   font-weight: 600;
+  // }
+  // textarea[placeholder]{
+  //   color: $black;
+  //   font-size: $text;
+  // }
+  // input:focus, textarea:focus{
+  // }
+
+  input[type=submit]{
+    display: none;
+  }
+
+  .comment_author{
+    input[placeholder]{
+      color: $blue;
+      font-size: $subtitle;
+      font-weight: 600;
+    }
+  }
+  .comment_content{
+    input[placeholder]{
+      color: $black;
+      font-size: $text;
+      font-weight: 400;
+    }
+  }
+}
+
+
+#comments{
+  .comment{
+    h2{
+      color: $blue;
+      font-weight: 600;
+    }
+  }
+}

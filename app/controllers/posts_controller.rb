@@ -10,5 +10,7 @@ class PostsController < ApplicationController
   end
 
   def admin
+    @project = Project.new()
+    @story = Story.new()
   end
 end

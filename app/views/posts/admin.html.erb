@@ -1,3 +1,26 @@
 <h1>Hola, que deseas hacer hoy?</h1>
-<%= link_to "Post a new project", new_project_path %>
-<%= link_to "Post a new story", new_story_path %>
+
+<h1>New Project</h1>
+<%= simple_form_for @project do |f| %>
+  <%= f.input :title %>
+  <%= f.input :year %>
+  <%= f.input :status, collection: Post.statuses.keys%>
+  <%= f.input :author %>
+  <%= f.input :collaborators %>
+  <%= f.input :categories %>
+  <%= f.input :software %>
+  <%= f.input :content %>
+  <%= f.input :images, as: :file %>
+  <%= f.button :submit %>
+<% end %>
+
+
+<h1>New Story</h1>
+<%= simple_form_for @story do |f| %>
+  <%= f.input :title %>
+  <%= f.input :author %>
+  <%= f.input :categories %>
+  <%= f.input :content %>
+  <%= f.input :images, as: :file %>
+  <%= f.button :submit %>
+<% end %>

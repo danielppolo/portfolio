@@ -1,6 +1,6 @@
 class StoriesController < ApplicationController
   protect_from_forgery
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:create]
 
   def index
     @stories = Story.all
@@ -17,16 +17,13 @@ class StoriesController < ApplicationController
     @likes = @story.likes
     @comments = @story.comments
     @comment = Comment.new()
-  end
-
-  def new
-    @story = Story.new()
+    @post = @story
   end
 
   def create
     @story = Story.new(story_params)
     @story.save
-    redirect_to new_story_path
+    redirect_to admin_path
   end
 
   private
