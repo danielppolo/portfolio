@@ -77,6 +77,10 @@ p{
   height: 100vh - $navbar;
 }
 
+.flex-fullheight{
+  min-height: 100vh - $navbar;
+}
+
 .fullwidth{
   width: 100vw;
 }

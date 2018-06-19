@@ -1,11 +1,15 @@
 .carousel-item{
   height: 100%;
-  img{
-    width: 100%;
-    height: auto;
+  .carousel-img{
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .carousel-title{
     font-size: $super !important;
+    font-weight: 600;
     position: absolute;
     align-self: center;
     color: $white;

@@ -1,6 +1,6 @@
-<h1><%= @title %></h1>
-<p><%= @reading_time %></p>
-<p><%= @content %></p>
+<h1><%= @title if @title %></h1>
+<p><%= @reading_time if @content %></p>
+<p><%= @content if @content%></p>
 
 <%= render 'shared/feedback' %>
 <%= javascript_pack_tag "like" %>
