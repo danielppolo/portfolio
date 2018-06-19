@@ -1,0 +1,14 @@
+.carousel-item{
+  height: 100%;
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .carousel-title{
+    font-size: $super !important;
+    position: absolute;
+    align-self: center;
+    color: $white;
+    text-align: center;
+  }
+}

@@ -1,26 +1,16 @@
-<h1>Hola, que deseas hacer hoy?</h1>
-
-<h1>New Project</h1>
-<%= simple_form_for @project do |f| %>
-  <%= f.input :title %>
-  <%= f.input :year %>
-  <%= f.input :status, collection: Post.statuses.keys%>
-  <%= f.input :author %>
-  <%= f.input :collaborators %>
-  <%= f.input :categories %>
-  <%= f.input :software %>
-  <%= f.input :content %>
-  <%= f.input :images, as: :file %>
-  <%= f.button :submit %>
-<% end %>
-
-
-<h1>New Story</h1>
-<%= simple_form_for @story do |f| %>
-  <%= f.input :title %>
-  <%= f.input :author %>
-  <%= f.input :categories %>
-  <%= f.input :content %>
-  <%= f.input :images, as: :file %>
-  <%= f.button :submit %>
-<% end %>
+  <div class="container">
+    <div class="innerheight">
+      <div class="admin">
+        <h1>hola daniel, do you want to...</h1>
+        <div class="admin-action">
+          <%= link_to "publish new project", new_project_path %>
+        </div>
+        <div class="admin-action">
+          <%= link_to "write new story", new_story_path %>
+        </div>
+        <div class="admin-action close-session">
+          <%= link_to "close session", destroy_user_session_path, method: :delete %>
+        </div>
+      </div>
+    </div>
+  </div>

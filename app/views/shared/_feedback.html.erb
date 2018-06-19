@@ -1,6 +1,8 @@
-<div class="container">
-  <%= render 'shared/like' %>
-  <h1>comments</h1>
-  <%= render 'comments/show', comments: @comments %>
-  <%= render 'comments/form', post: @post, comment: @comment %>
+<div class="feedback">
+  <div class="container">
+    <%= render 'shared/like' %>
+    <h1>comments</h1>
+    <%= render 'comments/show', comments: @comments %>
+    <%= render 'comments/form', post: @post, comment: @comment %>
+  </div>
 </div>

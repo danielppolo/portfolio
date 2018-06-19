@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create]
   end
   resources :posts, only: :new
-  resources :projects, param: :title, concerns: :commentable, only: [ :show, :index, :create ]
-  resources :stories, param: :title, concerns: :commentable, only: [ :show, :index, :create ]
+  resources :projects, param: :title, concerns: :commentable, only: [ :show, :index, :new, :create ]
+  resources :stories, param: :title, concerns: :commentable, only: [ :show, :index, :new, :create ]
 
 end

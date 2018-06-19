@@ -1,6 +1,6 @@
 class StoriesController < ApplicationController
   protect_from_forgery
-  before_action :authenticate_user!, only: [:create]
+  before_action :authenticate_user!, only: [:new, :create]
 
   def index
     @stories = Story.all
@@ -20,15 +20,21 @@ class StoriesController < ApplicationController
     @post = @story
   end
 
+  def new
+    @story = Story.new
+  end
+
   def create
     @story = Story.new(story_params)
     @story.save
+    @story.cover.attach(params[:story][:cover]) if params[:story][:cover]
+    @story.images.attach(params[:story][:images]) if params[:story][:images]
     redirect_to admin_path
   end
 
   private
 
   def story_params
-    params.require(:story).permit(:title, :content, :categories, :author, :images)
+    params.require(:story).permit(:title, :content, :categories, :author, :images, :cover)
   end
 end

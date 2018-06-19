@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.feedback{
+  padding: 4em 0;
+}
 // Comment Form
 #new_comment{
   width: 100%;
@@ -49,9 +52,12 @@
 
 #comments{
   .comment{
+    margin: 2em 0;
+
     h2{
       color: $blue;
       font-weight: 600;
+      margin: 0;
     }
   }
 }

@@ -1,3 +1,9 @@
+<% if @project.images.attached? %>
+<h1><%= "There are images" %></h1>
+  <% @project.images.each do |i| %>
+    <%= image_tag i %>
+  <% end %>
+<% end %>
 <h1><%= @project.title %></h1>
 <h3><%= @year if @year%></h3>
 <p><%= @status if @status%></p>

@@ -1,20 +1,23 @@
 .portfolio-nav{
   display: flex;
-  height: 80px;
+  height: $navbar;
   justify-content: space-around;
   align-items: center;
   background-color: $white;
   box-shadow: 0 0 40px rgba(0,0,0,0.1);
-
+  margin-bottom: 0;
   .nav-element{
     width: 20%;
     text-align: center;
-
     .nav-links{
-    font-size: $title;
-    font-weight: bold;
-    text-decoration: none;
-    color: $black;
+      font-size: $title;
+      font-weight: bold;
+      text-decoration: none;
+      color: $black;
+      transition: 0.5s ease;
+      &:hover{
+        color: $blue;
+      }
     }
   }
 }

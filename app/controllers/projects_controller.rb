@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   protect_from_forgery
-  before_action :authenticate_user!, only: [:create]
+  before_action :authenticate_user!, only: [:new, :create]
+
 
   def index
     @projects = Project.all
@@ -24,15 +25,21 @@ class ProjectsController < ApplicationController
     @post = @project
   end
 
+  def new
+    @project = Project.new
+  end
+
   def create
     @project = Project.new(project_params)
     @project.save
+    @project.cover.attach(params[:project][:cover]) if params[:project][:cover]
+    @project.images.attach(params[:project][:images]) if params[:project][:images]
     redirect_to admin_path
   end
 
   private
 
   def project_params
-    params.require(:project).permit(:title, :year, :software, :status, :content, :categories, :collaborators, :author, :images)
+    params.require(:project).permit(:title, :year, :software, :status, :content, :categories, :collaborators, :author, :images, :cover)
   end
 end

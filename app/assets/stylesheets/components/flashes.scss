@@ -1,0 +1,13 @@
+.alert{
+  font-size: $text;
+  font-family: $base-font;
+  text-align: center;
+  color: $white;
+
+}
+.alert-info{
+  background-color: $blue;
+}
+.alert-warning{
+  background-color: $red;
+}

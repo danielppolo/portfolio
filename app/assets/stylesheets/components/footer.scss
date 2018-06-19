@@ -1,6 +1,6 @@
 .portfolio-footer{
   background-color: $blue;
-  height: 400px;
+  height: $navbar*4;
   .container{
     height: 100%;
   }
@@ -20,8 +20,6 @@
       font-size: $title;
       font-weight: 600;
       text-decoration: none;
-      width: auto;
-      // border-bottom: 4px solid $yellow;
     }
   }
 }

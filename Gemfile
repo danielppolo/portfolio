@@ -18,8 +18,11 @@ gem 'puma', '~> 3.11'
 #Simple Form for creating objects
 gem 'simple_form'
 # Use SCSS for stylesheets
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap', '~> 4.1.1' # => For v4.0
+# gem 'bootstrap-sass', '~> 3.3.7'
+gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
+gem 'font-awesome-sass', '~> 5.0.13'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -39,7 +42,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

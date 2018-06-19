@@ -1,8 +1,10 @@
 class Post < ApplicationRecord
   validates :title, presence: true
   validates :content, presence: true
-  enum status: [ :done, :working, :project ]
+  enum status: [ :project, :working, :completed ]
   has_many :comments, dependent: :destroy
+  #Adding images to the model
+  has_one_attached :cover
   has_many_attached :images
 
   #Instead of ID's param
@@ -29,6 +31,7 @@ class Post < ApplicationRecord
   end
 
   def self.search_by_category
+    # TODO
     # => Array of posts
   end
 

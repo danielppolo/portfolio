@@ -17,14 +17,14 @@
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
+@import "config/variables";
 /*@import "config/bootstrap_variables";*/
-/*@import "config/variables";*/
 
 // External libraries
-@import "bootstrap-sprockets";
 @import "bootstrap";
-/*@import "font-awesome-sprockets";
-@import "font-awesome";*/
+// @import "bootstrap-sprockets";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 // Your CSS partials
 /*@import "layouts/index";*/
@@ -34,12 +34,12 @@
 
 // General rules
  ::-moz-selection { /* Code for Firefox */
-    color: $blue;
+    color: $black;
     background: $yellow;
 }
 
 ::selection {
-    color: $blue;
+    color: $black;
     background: $yellow;
 }
 
@@ -62,4 +62,26 @@ h2{
 p{
   font-size: $text;
   font-weight: 400;
+}
+
+.wrapper_fullscreen{
+  width: 100vw;
+  height: 100vh;
+}
+
+.innerheight{
+  height: 100vh - $footer - $navbar;
+}
+
+.fullheight{
+  height: 100vh - $navbar;
+}
+
+.fullwidth{
+  width: 100vw;
+}
+
+.fullfill{
+  width: 100%;
+  height: 100%;
 }

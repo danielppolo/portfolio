@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def home
     @projects = Project.all
     @stories = Story.all
+    @last = [Project.last, Story.last]
   end
 
   def bio
