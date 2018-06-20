@@ -1,17 +1,33 @@
-<% if @project.images.attached? %>
-<h1><%= "There are images" %></h1>
-  <% @project.images.each do |i| %>
-    <%= image_tag i %>
-  <% end %>
+<% if @project.cover.attached? %>
+<div class="post-cover parallax-window" data-parallax="scroll" data-image-src="<%= url_for(@project.cover) %>"></div>
 <% end %>
-<h1><%= @title if @title %></h1>
-<h3><%= @year if @year%></h3>
-<p><%= @status if @status%></p>
-<p><%= @author if @author %> <%= "& #{@collaborators}" if @collaborators %></p>
-<% @categories.each do |c| %>
-<p><%= c %></p>
-<% end %>
-<p><%= @content %></p>
+
+<div class="container">
+  <div class=" row post-headline align-items-center">
+    <div class="col-sm-6">
+      <h1><%= @title if @title %></h1>
+      <p><%= @year if @year%></p>
+    </div>
+    <div class="col-sm-6 ">
+      <p><%= @content.first if @content%></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <% if @project.images.attached? %>
+      <% @project.images.each do |i| %>
+        <div class="col-sm-12 post-img">
+          <%= image_tag i, class: "fullfill" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
 
 <%= render 'shared/feedback' %>
 <%= javascript_pack_tag "like" %>
+<%= javascript_pack_tag "parallax" %>
+
+

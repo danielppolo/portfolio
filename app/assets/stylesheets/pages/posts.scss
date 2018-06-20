@@ -1,3 +1,96 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.posts-item{
+  text-decoration: none;
+  .posts-img{
+    min-height: 30vh;
+    margin: 1em 0;
+    border-radius: 2px;
+    background-color: $yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding: 3em;
+    box-sizing: border-box;
+  }
+  .posts-text{
+    text-align: center;
+    color: $white;
+    width: 50%;
+    margin: 0;
+    h1, p {
+      margin: 0;
+    }
+  }
+  .posts-content{
+    overflow: hidden;
+    width: 50%;
+    color: $white;
+    p{
+      margin: 0;
+    }
+  }
+}
+
+.posts-s-item{
+  text-decoration: none;
+  .posts-s-img{
+    min-height: 30vh;
+    margin: 1em 0;
+    border-radius: 2px;
+    background-color: $white;
+    border: 1px solid $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding: 3em;
+    box-sizing: border-box;
+    transition: 1s ease;
+    &:hover{
+      background-color: $white;
+      border: 1px solid $red;
+      .posts-s-text, .posts-s-content{
+        color: $red;
+      }
+    }
+  }
+  .posts-s-text{
+    text-align: center;
+    color: $black;
+    width: 50%;
+    margin: 0;
+    transition: 1s ease;
+    h1, p {
+      margin: 0;
+    }
+  }
+  .posts-s-content{
+    overflow: hidden;
+    max-height: 9em;
+    width: 50%;
+    color: $black;
+    transition: 1s ease;
+    p{
+      margin: 0;
+      line-height: 1.5em;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+    .posts-s-item .posts-s-img {
+      display: block;
+      .posts-s-text, .posts-s-content{
+        text-align: center;
+        width: 100%;
+      }
+      .posts-s-text{
+        margin-bottom: 2em;
+      }
+    }
+}

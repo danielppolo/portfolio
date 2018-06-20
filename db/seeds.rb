@@ -5,3 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+projects = [
+  template: {
+    title: "",
+    content: "",
+    year: 2012,
+    author: "",
+    collaborators: "",
+    software: "",
+    cover: "",
+    images: [],
+    categories: "",
+    status: "",
+  },
+
+]
+
+stories = [
+  template: {
+    title: "",
+    content: "",
+    author: "",
+    categories: "",
+  }
+]

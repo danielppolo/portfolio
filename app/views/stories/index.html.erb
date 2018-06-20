@@ -1,5 +1,17 @@
-<ul>
-  <% @stories.each do |story| %>
-    <li><%= link_to story.title, story_path(story) %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="row flex-innerheight">
+    <% @stories.each do |story| %>
+    <a class="posts-s-item col-md-12 col-xs-12" href="<%= story_path(story) %>">
+      <div class="posts-s-img">
+        <div class="posts-s-text">
+          <h1><%= story.title%></h1>
+          <p><%= story.reading_time %></p>
+        </div>
+        <div class="posts-s-content">
+          <p><%= story.content %></p>
+        </div>
+      </div>
+    </a>
+    <% end %>
+  </div>
+</div>

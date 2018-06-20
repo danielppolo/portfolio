@@ -11,6 +11,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find_by(title: params[:title])
     @title = @project.title
+    @content = @project.content.split("\n")
     @year = @project.year
     @status = @project.status
     @author = @project.author
@@ -18,7 +19,6 @@ class ProjectsController < ApplicationController
     @software = @project.software.split(",").map{|w| w.capitalize.strip }.join(", ")
     @reading_time = @project.reading_time
     @categories = @project.categories.split(",").map{ |c| "##{c.strip}" }
-    @content = @project.content
     @likes = @project.likes
     @comments = @project.comments
     @comment = Comment.new()

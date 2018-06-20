@@ -1,6 +1,30 @@
-<h1><%= @title if @title %></h1>
-<p><%= @reading_time if @content %></p>
-<p><%= @content if @content%></p>
+<div class="story-post">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 text-center story-title">
+        <h1><%= @title if @title %></h1>
+      </div>
+      <div class="col-sm-12 text-center story-details">
+        <p><%= @reading_time if @content %></p>
+      </div>
+      <div class="col-sm-10 text-center story-content">
+        <p><%= @content if @content%></p>
+      </div>
+
+    <% if @story.images.attached? %>
+      <% @story.images.each do |i| %>
+        <div class="col-sm-12">
+          <%= image_tag i, class: "fullfill" %>
+        </div>
+      <% end %>
+    <% end %>
+
+    </div>
+  </div>
+</div>
+
 
 <%= render 'shared/feedback' %>
 <%= javascript_pack_tag "like" %>
+<%= javascript_pack_tag "parallax" %>
+

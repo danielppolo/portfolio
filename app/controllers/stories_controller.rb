@@ -10,10 +10,10 @@ class StoriesController < ApplicationController
   def show
     @story = Story.find_by(title: params[:title])
     @title = @story.title
+    @content = @story.content
     @author = @story.author
     @reading_time = @story.reading_time
     @categories = @story.categories.split(",").map { |c| "##{c}" }
-    @content = @story.content
     @likes = @story.likes
     @comments = @story.comments
     @comment = Comment.new()

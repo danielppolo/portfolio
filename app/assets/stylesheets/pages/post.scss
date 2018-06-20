@@ -1,0 +1,26 @@
+.post-cover{
+  height: 60vh;
+  width: 100%;
+}
+.post-headline{
+  min-height: 40vh;
+}
+.post-img{
+  margin: 10px;
+}
+
+
+.story-post{
+  padding: 8em 0;
+  .story-title{
+    color: $red;
+  }
+  .story-details{
+    p{
+      margin: 0;
+    }
+  }
+  .story-content{
+    margin: 2em 0;
+  }
+}
