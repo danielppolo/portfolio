@@ -4,14 +4,14 @@
     <div class="carousel-item active">
       <a href="<%= project_path(@featured.first) %>">
         <div class="carousel-img fullfill" style='background-image: url("<%= url_for(@featured.first.cover) %>");'>
-          <h1 class="carousel-title d-none d-md-block">featured project<br><%= @featured.first.title %></h1>
+          <h1 class="carousel-title d-none d-md-block">featured project<br><%= @featured.first.title.downcase %></h1>
         </div>
       </a>
     </div>
     <div class="carousel-item ">
       <a href="<%= story_path(@featured.last) %>">
         <div class="carousel-img fullfill" style='background-image: url("<%= url_for(@featured.last.cover) %>");'>
-          <h1 class="carousel-title d-none d-md-block">featured story<br><%= @featured.last.title %></h1>
+          <h1 class="carousel-title d-none d-md-block">featured story<br><%= @featured.last.title.downcase %></h1>
         </div>
       </a>
     </div>
@@ -21,7 +21,7 @@
 <div class="container">
   <div class="row flex-innerheight justify-content-center align-items-center">
     <div class="bio-desc col-md-10">
-      <h1>Daniel Polo is a male-type creative technologist. He <span><%= icon('fas', 'heart') %></span> the internet, sci-fi, arts and .</h1>
+       <h1>Daniel Polo is a male-type creative technologist. He is crazy for the internet, sci-fi, arts and media. After graduating from the Architecture School in Mexico City, Daniel Polo paused his architecture passion searching for new ones... then coding came to him.<br>He is a curious young man who always wants to understand "how" everything, so Daniel <em>googles</em> a lot. He also thinks he's been cursed because of that.<br><br>Daniel Polo <span><%= icon('fas', 'heart') %></span> espresso and tacos.</h1>
     </div>
   </div>
 </div>
