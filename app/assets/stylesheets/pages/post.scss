@@ -4,9 +4,22 @@
 }
 .post-headline{
   min-height: 40vh;
+  padding: 3em 0;
 }
 .post-img{
   margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-headline {
+        text-align: center;
+    }
+    .bio-desc{
+      font-size: $text;
+    }
+    h1{
+      font-size: $subtitles;
+    }
 }
 
 
