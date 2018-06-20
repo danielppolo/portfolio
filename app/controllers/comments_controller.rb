@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @post = Post.find_by(title: params[:project_title] || params[:story_title] )
     @comment.post = @post
+    #Part of Ajaxification of the comments
     if @comment.save
       respond_to do |format|
         format.html { redirect_to project_path(@post) }

@@ -1,3 +1,4 @@
+<% content_for :title, "Work" %>
 <% if @project.cover.attached? %>
 <div class="post-cover parallax-window" data-parallax="scroll" data-image-src="<%= url_for(@project.cover) %>"></div>
 <% end %>

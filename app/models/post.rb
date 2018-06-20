@@ -1,13 +1,15 @@
 class Post < ApplicationRecord
+  #Requisite for model creation
   validates :title, presence: true
   validates :content, presence: true
   enum status: [ :project, :working, :completed ]
+  #Relation between models
   has_many :comments, dependent: :destroy
-  #Adding images to the model
+  #Adding images to the model with Active Storage
   has_one_attached :cover
   has_many_attached :images
 
-  #Instead of ID's param
+  #Instead of ID's param in URL
   def to_param
     title
   end

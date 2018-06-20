@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   get 'bio', to: 'posts#bio', as: 'bio'
   get 'admin', to: 'posts#admin', as: 'admin'
 
+  #Nesting of routes for creating comments
   concern :commentable do
     resources :comments, only: [:new, :create]
   end
-  resources :posts, only: :new
+  #Routes for posts
   resources :projects, param: :title, concerns: :commentable, only: [ :show, :index, :new, :create ]
   resources :stories, param: :title, concerns: :commentable, only: [ :show, :index, :new, :create ]
 

@@ -1,4 +1,5 @@
 class StoriesController < ApplicationController
+  #Securing the creation of models only with authentication of the admin w/Devise
   protect_from_forgery
   before_action :authenticate_user!, only: [:new, :create]
 
@@ -27,6 +28,7 @@ class StoriesController < ApplicationController
   def create
     @story = Story.new(story_params)
     @story.save
+    #Saving images with Active Storage
     @story.cover.attach(params[:story][:cover]) if params[:story][:cover]
     @story.images.attach(params[:story][:images]) if params[:story][:images]
     redirect_to admin_path
@@ -34,6 +36,7 @@ class StoriesController < ApplicationController
 
   private
 
+  #Method that secures the params got in the form
   def story_params
     params.require(:story).permit(:title, :content, :categories, :author, :images, :cover)
   end
