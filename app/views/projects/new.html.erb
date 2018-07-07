@@ -11,8 +11,14 @@
       <%= f.input :categories, placeholder: 'categories w/commas' %>
       <%= f.input :software, placeholder: 'software  w/commas' %>
       <%= f.input :content, placeholder: 'project description' %>
-      <%= f.input :cover, as: :file, label: 'upload cover picture' %>
-      <%= f.input :images, as: :file, label: 'upload pictures', input_html: {  multiple: true } %>
+      <!--%= f.input :cover, as: :file, label: 'upload cover picture' %-->
+      <!--%= f.input :images, as: :file, label: 'upload pictures', input_html: {  multiple: true } direct_upload: true %-->
+      <%= f.input :cover do %>
+        <%= f.file_field :cover, direct_upload: true %>
+      <% end %>
+      <%= f.input :images do %>
+        <%= f.file_field :images, multiple: true, direct_upload: true %>
+      <% end %>
       <%= f.submit 'publish project' %>
       <% end %>
     </div>

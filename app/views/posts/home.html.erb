@@ -1,20 +1,18 @@
 <% content_for :title, "Home" %>
 <div id="main_carousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner fullheight">
+
+    <% @recent.each do |post| %>
     <div class="carousel-item active">
-      <a href="<%= project_path(@featured.first) %>">
-        <div class="carousel-img fullfill" style='background-image: url("<%= url_for(@featured.first.cover) %>");'>
-          <h1 class="carousel-title d-none d-md-block">featured project<br><%= @featured.first.title.downcase %></h1>
+      <a href="<%= project_path(post) %>">
+        <div class="carousel-img fullfill" style='background-image: url("<%= url_for(post.cover) %>");'>
+          <h1 class="carousel-title d-none d-md-block">
+            <%= post.class == Project ? "featured project" : "featured story" %>
+            <br><%= post.title.downcase %></h1>
         </div>
       </a>
     </div>
-    <div class="carousel-item ">
-      <a href="<%= story_path(@featured.last) %>">
-        <div class="carousel-img fullfill" style='background-image: url("<%= url_for(@featured.last.cover) %>");'>
-          <h1 class="carousel-title d-none d-md-block">featured story<br><%= @featured.last.title.downcase %></h1>
-        </div>
-      </a>
-    </div>
+  <% end %>
   </div>
 </div>
 

@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
-
+#Cloud Storage
+gem "aws-sdk-s3", require: false
 #Debug
 gem 'pry'
 gem 'better_errors'

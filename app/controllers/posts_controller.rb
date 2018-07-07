@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def home
     @projects = Project.all
     @stories = Story.all
-    @featured = [Project.last, Story.last]
+    @recent = Post.all.last(3)
   end
 
   def bio
