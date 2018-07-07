@@ -1,7 +1,7 @@
 class StoriesController < ApplicationController
   #Securing the creation of models only with authentication of the admin w/Devise
   protect_from_forgery
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @stories = Story.all
