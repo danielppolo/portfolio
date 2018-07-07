@@ -1,9 +1,9 @@
-<% content_for :title, "New" %>
+<% content_for :title, "Edit" %>
 <div class="container">
   <div class="admin">
     <div class="new-post">
-      <h1>new project</h1>
-      <%= simple_form_for @project, html: {multipart: true} do |f| %>
+      <h1>edit project</h1>
+      <%= simple_form_for @project, method: :patch, html: {multipart: true} do |f| %>
       <%= f.input :title, placeholder: 'project name' %>
       <%= f.input :year, placeholder: 'year', collection: (Date.today.year.to_i - 6)..Date.today.year.to_i, selected: Date.today.year.to_i %>
       <%= f.input :status, placeholder: 'status',collection: Post.statuses.keys, selected: 0%>

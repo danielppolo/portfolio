@@ -1,3 +1,4 @@
+<% content_for :title, "Admin" %>
 <div class="container nav-margin">
     <div class="admin innerheight">
       <h1>hola daniel, do you want to...</h1>
@@ -5,13 +6,13 @@
         <%= link_to "publish new project", new_project_path %>
       </div>
       <div class="admin-action">
-        <%= link_to "manage projects", admin_projects_manager_path %>
+        <%= link_to "manage projects", projects_manager_path %>
       </div>
       <div class="admin-action">
         <%= link_to "write new story", new_story_path %>
       </div>
       <div class="admin-action">
-        <%= link_to "manage stories", admin_stories_manager_path %>
+        <%= link_to "manage stories", stories_manager_path %>
       </div>
       <div class="admin-action close-session">
         <%= link_to "close session", destroy_user_session_path, method: :delete %>

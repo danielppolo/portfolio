@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   validates :content, presence: true
   enum status: [ :project, :working, :completed ]
   #Relation between models
-  has_many :comments, dependent: :destroy
+  has_many :comments, dependent: :delete_all
   #Adding images to the model with Active Storage
   has_one_attached :cover
   has_many_attached :images

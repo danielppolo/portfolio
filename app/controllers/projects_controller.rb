@@ -38,6 +38,22 @@ class ProjectsController < ApplicationController
     redirect_to admin_path
   end
 
+  def edit
+    @project = Project.find_by(title: params[:title])
+  end
+
+  def update
+    @project = Project.find_by(title: params[:title])
+    @project.update(project_params)
+    redirect_to admin_path
+  end
+
+  def destroy
+    @project = Project.find_by(title: params[:title])
+    @project.destroy
+    redirect_to admin_path
+  end
+
   private
 
   def project_params

@@ -1,0 +1,11 @@
+<% content_for :title, "Manage" %>
+<% @projects.each do |project| %>
+  <div>
+    <h2>
+      <%= project.title %>
+      <%= link_to "show", project_path(project) %>
+      <%= link_to "edit", edit_project_path(project) %>
+      <%= link_to "delete", project_path(project), method: :delete %>
+    </h2>
+  </div>
+<% end %>
