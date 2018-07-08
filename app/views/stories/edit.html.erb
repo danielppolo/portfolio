@@ -1,0 +1,17 @@
+<% content_for :title, "Edit" %>
+<div class="container">
+  <div class="admin">
+    <div class="new-post">
+      <h1>edit story</h1>
+      <%= simple_form_for @story, method: :patch do |f| %>
+      <%= f.input :title, placeholder: 'story title' %>
+      <%= f.input :author, placeholder: 'who wrote it?' %>
+      <%= f.input :categories, placeholder: 'categories w/commas' %>
+      <%= f.input :content, placeholder: 'begin writting...' %>
+      <%= f.input :cover, as: :file, label: 'upload cover picture' %>
+      <%= f.input :images, as: :file, label: 'upload pictures', multiple: true %>
+      <%= f.submit 'post story' %>
+      <% end %>
+    </div>
+  </div>
+</div>

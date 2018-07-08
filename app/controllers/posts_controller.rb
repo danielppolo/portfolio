@@ -16,4 +16,12 @@ class PostsController < ApplicationController
     @project = Project.new()
     @story = Story.new()
   end
+
+  def project_manager
+    @projects = Project.all
+  end
+
+  def story_manager
+    @stories = Story.all
+  end
 end

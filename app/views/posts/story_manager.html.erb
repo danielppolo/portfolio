@@ -1,0 +1,11 @@
+<% content_for :title, "Manage" %>
+<% @stories.each do |story| %>
+  <div>
+    <h2>
+      <%= story.title %>
+      <%= link_to "show", story_path(story) %>
+      <%= link_to "edit", edit_story_path(story) %>
+      <%= link_to "delete", story_path(story), method: :delete %>
+    </h2>
+  </div>
+<% end %>

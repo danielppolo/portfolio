@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   #Securing the creation of models only with authentication of the admin w/Devise
   protect_from_forgery
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
 
   def index
@@ -35,6 +35,22 @@ class ProjectsController < ApplicationController
     @project.save
     @project.cover.attach(params[:project][:cover]) if params[:project][:cover]
     @project.images.attach(params[:project][:images]) if params[:project][:images]
+    redirect_to admin_path
+  end
+
+  def edit
+    @project = Project.find_by(title: params[:title])
+  end
+
+  def update
+    @project = Project.find_by(title: params[:title])
+    @project.update(project_params)
+    redirect_to admin_path
+  end
+
+  def destroy
+    @project = Project.find_by(title: params[:title])
+    @project.destroy
     redirect_to admin_path
   end
 
