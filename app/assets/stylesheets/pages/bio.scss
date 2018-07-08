@@ -13,3 +13,19 @@
     }
   }
 }
+
+.bio-social{
+  .icons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    a{
+      margin: 0 2em;
+      font-size: $title;
+      color: $black;
+      transition: 0.5s ease;
+  }
+}
+}
+

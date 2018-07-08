@@ -6,6 +6,32 @@
   background-color: $white;
   // box-shadow: 0 0 40px rgba(0,0,0,0.1);
   margin-bottom: 0;
+
+  .container{
+    .nav-element{
+      &:nth-child(1){
+        a{
+          &:hover{
+            color: $blue;
+          }
+        }
+      }
+      &:nth-child(2){
+        a{
+          &:hover{
+            color: $yellow;
+          }
+        }
+      }
+      &:nth-child(3){
+        a{
+          &:hover{
+            color: $red;
+          }
+        }
+      }
+    }
+  }
   .nav-element{
     text-align: center;
     .nav-links{
@@ -14,9 +40,6 @@
       text-decoration: none;
       color: $black;
       transition: 0.5s ease;
-      &:hover{
-        color: $blue;
-      }
     }
   }
 }

@@ -101,3 +101,22 @@ p{
 .nav-margin{
   margin-top: $navbar;
 }
+
+
+.hover-red{
+  &:hover{
+    color: $red !important;
+  }
+}
+
+.hover-blue{
+  &:hover{
+    color: $blue !important;
+  }
+}
+
+.hover-yellow{
+  &:hover{
+    color: $yellow !important;
+  }
+}
